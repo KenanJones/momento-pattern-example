@@ -1,7 +1,7 @@
 package edu.jalc.momentopattern.logging;
 
 import edu.jalc.momentopattern.logging.messages.Warn;
-import edu.jalc.momentopattern.logging.observers.ConsoleLogger;
+import edu.jalc.momentopattern.logging.observers.*;
 import edu.jalc.momentopattern.logging.observers.Observer;
 
 import java.util.ArrayList;
@@ -15,6 +15,7 @@ class Caretaker {
 
 	Caretaker(){
 		this.observers.add(new ConsoleLogger());
+		this.observers.add(new LogBeeper());
 	}
 
 	Caretaker add(final Message message){
